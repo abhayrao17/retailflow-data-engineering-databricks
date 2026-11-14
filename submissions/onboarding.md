@@ -1,4 +1,3 @@
-
 # RetailFlow onboarding
 
 Source: https://github.com/Certisured/retailflow-data-engineering-databricks
