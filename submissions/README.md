@@ -1,7 +1,35 @@
-# Your learning evidence
+# RetailFlow Data Engineering Submission
 
-Keep edited/exported .ipynb notebooks under the original notebooks/ filenames in your fork. Use this folder for your own progress notes and actual run evidence as Build Buddy requests it. No submission has been completed in the starter.
+## Source
 
-At a milestone, record the lesson and exercise cell ID, the command or cell you ran, the actual output, and a short explanation of what it means. Use plain Markdown notes or screenshots of your own training results. Do not include credentials or unrelated personal information.
+Official repository: https://github.com/Certisured/retailflow-data-engineering-databricks
 
-Final evidence should show the 80-sale current state, all final expected-view comparisons passing, batch 02 and old-batch replay no-ops, and explanations for D-004, D-063, S0006, S0003 and S0080. Include the starter version and source commit used. A repository checker can inspect saved artifacts; it cannot establish Databricks execution from a blank-output notebook alone.
+Starting point: My own fork of the official repository, cloned from the `main` branch.
+
+## What I built
+
+Completed the RetailFlow Databricks data engineering exercises using PySpark and Delta tables.
+
+The work includes:
+- Reading and validating the supplied sales data.
+- Cleaning records and separating rejected and duplicate rows.
+- Enriching sales with store, product and customer information.
+- Creating Bronze and Silver Delta tables.
+- Processing incremental sales and handling replay.
+- Building final reporting metrics and verification checks.
+
+## Data quality examples
+
+- Repaired the missing unit price for source row `D-004` using product `P004`.
+- Rejected source row `D-063` because its quantity was invalid.
+
+## Incremental processing examples
+
+- Corrected sale `S0003` to quantity 4, record version 2.
+- Retained late-arriving sale `S0080` with its original business date of 2 January 2026.
+
+## Evidence
+
+Evidence file: `retailflow_final_evidence.png`
+
+The evidence contains the actual final verification output and replay results from Databricks.
